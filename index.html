@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Reveal Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Word Reveal Game</h1>
+    <div id="wordBoard" class="board"></div>
+
+    <input id="guessInput" type="text" maxlength="1" placeholder="Enter a letter..." />
+    <button id="guessBtn" onclick="checkGuess()">Guess</button>
+
+    <div id="result" class="result"></div>
+    <div id="timer" class="timer">⏱ Time left: <span id="timeLeft">15</span>s</div>
+    <button id="endGameBtn" class="end-btn" onclick="endGame()">End Game</button>
+
+    <audio id="correctSound" src="correct.wav"></audio>
+    <audio id="wrongSound" src="wrong.wav"></audio>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
