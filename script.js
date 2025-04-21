@@ -11,8 +11,6 @@ const KEYWORD = "UNIQUE";
 const ROWS = 10;
 const COLS = 5;
 let guessedLetters = new Set();
-let timer;
-let timeLeft = 15;
 
 const board = document.getElementById("wordBoard");
 const input = document.getElementById("guessInput");
@@ -123,4 +121,3 @@ function disableGame() {
 }
 
 renderBoard();
-startTimer();
