@@ -1,16 +1,18 @@
 // === CONFIG ===
-const secretWords = [
-  { word: "COMMUNITY", row: 0, col: 0, direction: "vertical" },
-  { word: "ENERGY", row: 3, col: 1, direction: "vertical" },
-  { word: "CONFIDENT", row: 0, col: 2, direction: "vertical" },
-  { word: "EQUITY", row: 3, col: 3, direction: "vertical" },
-  { word: "CREATIVITY", row: 2, col: 4, direction: "vertical" }
+const secretWords =[
+  { word: "COMMUNITY", row: 0, col: 0, direction: "horizontal" },
+  { word: "ENERGY", row: 1, col: 4, direction: "horizontal" },
+  { word: "CONFIDENT", row: 2, col: 0, direction: "horizontal" },
+  { word: "EQUITY", row: 3, col: 4, direction: "horizontal" },
+  { word: "CREATIVITY", row: 4, col: 3, direction: "horizontal" }
 ];
 
+
 const KEYWORD = "UNIQUE";
-const ROWS = 10;
-const COLS = 5;
+const ROWS = 5;
+const COLS = 10;
 let guessedLetters = new Set();
+
 
 const board = document.getElementById("wordBoard");
 const input = document.getElementById("guessInput");
@@ -50,10 +52,15 @@ function renderBoard() {
       const letter = grid[r][c];
       const div = document.createElement("div");
 
-      // Check for custom highlight on row 5 (index 4) and columns 0–4
-      if (r === 4 && c >= 0 && c <= 4) {
+      // Check for custom highlight on row 5 (index 5)
+      if (r === 5) {
         div.className = "tile special-highlight";
-      } else {
+      } 
+      // Check for custom highlight on column 5 (index 5)
+      else if (c === 5) {
+        div.className = "tile column-highlight";
+      }
+      else {
         div.className = letter ? "tile" : "tile blank";
       }
 
