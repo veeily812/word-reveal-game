@@ -1,10 +1,10 @@
 // === CONFIG ===
 const secretWords =[
   { word: "COMMUNITY", row: 0, col: 0, direction: "horizontal" },
-  { word: "ENERGY", row: 1, col: 4, direction: "horizontal" },
+  { word: "ENERGY", row: 1, col: 3, direction: "horizontal" },
   { word: "CONFIDENT", row: 2, col: 0, direction: "horizontal" },
-  { word: "EQUITY", row: 3, col: 4, direction: "horizontal" },
-  { word: "CREATIVITY", row: 4, col: 3, direction: "horizontal" }
+  { word: "EQUITY", row: 3, col: 3, direction: "horizontal" },
+  { word: "CREATIVITY", row: 4, col: 2, direction: "horizontal" }
 ];
 
 
@@ -52,12 +52,9 @@ function renderBoard() {
       const letter = grid[r][c];
       const div = document.createElement("div");
 
-      // Check for custom highlight on row 5 (index 5)
-      if (r === 5) {
-        div.className = "tile special-highlight";
-      } 
+      // Check for custom highlight on row 5 (index 5
       // Check for custom highlight on column 5 (index 5)
-      else if (c === 5) {
+      if (c === 4) {
         div.className = "tile column-highlight";
       }
       else {
