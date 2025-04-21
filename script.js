@@ -108,25 +108,6 @@ function isWin() {
   );
 }
 
-function startTimer() {
-  timeLeft = 15;
-  timeDisplay.textContent = timeLeft;
-  timer = setInterval(() => {
-    timeLeft--;
-    timeDisplay.textContent = timeLeft;
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      result.innerHTML = "⏳ Time's up! Try next letter...";
-      wrongSound.play();
-      resetTimer();
-    }
-  }, 1000);
-}
-
-function resetTimer() {
-  clearInterval(timer);
-  startTimer();
-}
 
 function endGame() {
   clearInterval(timer);
