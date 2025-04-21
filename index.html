@@ -11,6 +11,7 @@
   <div class="container">
     <h1>Word Reveal Game</h1>
     <h2>Bạn đã nghĩ ra từ nào chưa? :v</h2>
+    <button id="musicControl" class="music-btn" onclick="toggleMusic()">🔊</button>
     <div id="wordBoard" class="board"></div>
 
     <input id="guessInput" type="text" maxlength="1" placeholder="Enter a letter: " />
@@ -21,6 +22,7 @@
 
     <audio id="correctSound" src="correct.wav"></audio>
     <audio id="wrongSound" src="wrong.wav"></audio>
+    <audio id="backgroundMusic" src="Backgroud_music.mp3" loop></audio>
   </div>
   
 
