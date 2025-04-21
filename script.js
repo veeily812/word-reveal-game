@@ -21,8 +21,28 @@ const result = document.getElementById("result");
 const timeDisplay = document.getElementById("timeLeft");
 const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicControl = document.getElementById("musicControl");
 const endGameBtn = document.getElementById("endGameBtn");
 const guessBtn = document.getElementById("guessBtn");
+
+// Start background music
+backgroundMusic.volume = 0.3; // Set volume to 30%
+backgroundMusic.play().catch(error => {
+  console.log("Autoplay prevented. Please interact with the page to start music.");
+});
+
+function toggleMusic() {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    musicControl.textContent = "🔊";
+    musicControl.classList.remove("muted");
+  } else {
+    backgroundMusic.pause();
+    musicControl.textContent = "🔇";
+    musicControl.classList.add("muted");
+  }
+}
 
 // Create keyword reveal line but hide it initially
 const keywordLine = document.createElement("div");
