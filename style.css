@@ -35,6 +35,7 @@ body {
 }
 
 .container {
+  position: relative;
   background: #cfd3e1;
   padding: 30px;
   border-radius: 12px;
@@ -117,7 +118,7 @@ button {
   font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
-  background: #4CAF50;
+  background: #d3eef0;
   color: white;
   border: none;
   border-radius: 6px;
@@ -127,7 +128,7 @@ button {
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  background: #45a049;
+  background: #d3eef0;
 }
 
 .result {
@@ -178,5 +179,37 @@ button:hover {
 .tile.column-highlight {
   background-color: #4a90e2 !important;
   color: #fff !important;
+}
+
+.music-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d3eef0;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.music-btn.muted {
+  background: #dc3545;
+}
+
+.music-btn.muted:hover {
+  background: #b52b3a;
 }
 
