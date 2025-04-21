@@ -4,13 +4,14 @@ const secretWords =[
   { word: "ENERGY", row: 1, col: 3, direction: "horizontal" },
   { word: "CONFIDENT", row: 2, col: 0, direction: "horizontal" },
   { word: "EQUITY", row: 3, col: 3, direction: "horizontal" },
-  { word: "CREATIVITY", row: 4, col: 2, direction: "horizontal" }
+  { word: "CREATIVE", row: 5, col: 2, direction: "horizontal" },
+  { word: "ENTHUSIASTIC", row: 4, col: 0, direction: "horizontal" }
 ];
 
 
 const KEYWORD = "UNIQUE";
-const ROWS = 5;
-const COLS = 10;
+const ROWS = 6;
+const COLS = 12;
 let guessedLetters = new Set();
 
 
