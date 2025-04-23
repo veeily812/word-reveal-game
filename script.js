@@ -3,7 +3,7 @@ const secretWords =[
   { word: "COMMUNITY", row: 0, col: 0, direction: "horizontal" },
   { word: "ENERGY", row: 1, col: 3, direction: "horizontal" },
   { word: "CONFIDENT", row: 2, col: 0, direction: "horizontal" },
-  { word: "EQUITY", row: 3, col: 3, direction: "horizontal" },
+  { word: "QUALITY", row: 3, col: 4, direction: "horizontal" },
   { word: "CREATIVE", row: 5, col: 2, direction: "horizontal" },
   { word: "ENTHUSIASTIC", row: 4, col: 0, direction: "horizontal" }
 ];
